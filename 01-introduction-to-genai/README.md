@@ -1,146 +1,146 @@
-# Introduction to Generative AI and Large Language Models
+# Введение в генеративный ИИ и большие языковые модели
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
+[![Введение в генеративный ИИ и Большие Языковые Модели](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
 
-*(Click the image above to view video of this lesson)*
+*(Нажмите на картинку выше, чтобы посмотреть видео этого урока)*
 
-Generative AI is artificial intelligence capable of generating text, images and other types of content. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds. 
+Генеративный ИИ - это искусственный интеллект, способный генерировать текст, изображения и другие виды контента. Фантастичность этой технологии заключается в том, что она демократизирует искусственный интеллект: любой может использовать его, используя всего лишь текстовую подсказку, предложение, написанное на естественном языке. Вам не нужно изучать такие языки, как Java или SQL, чтобы добиться чего-то стоящего, все, что вам нужно, - это использовать свой язык, указать, что вы хотите, и получить предложение от модели искусственного интеллекта. Применения и влияние этой технологии огромны: вы пишете или понимаете отчеты, создаете приложения и многое другое, и все это за считанные секунды. 
 
-In this curriculum, we’ll explore how our startup leverages generative AI to unlock new scenarios in the education world and how we address the inevitable challenges associated with the social implications of its application and the technology limitations.
+В этой программе мы расскажем о том, как наш стартап использует генеративный ИИ для раскрытия новых сценариев в мире образования и как мы решаем неизбежные проблемы, связанные с социальными последствиями его применения и технологическими ограничениями.
 
-## Introduction
+## Введение
 
-This lesson will cover:
+В этом уроке мы рассмотрим:
 
-* Introduction to the business scenario: our startup idea and mission.
-* Generative AI and how we landed on the current technology landscape.
-* Inner working of a large language model.
-* Main capabilities and practical use cases of Large Language Models.
+* Введение в бизнес-сценарий: идея и миссия нашего стартапа.
+* Генеративный искусственный интеллект и то, как мы оказались на современном технологическом ландшафте.
+* Внутренняя работа большой языковой модели.
+* Основные возможности и практические примеры использования больших языковых моделей.
 
-## Learning Goals
+## Цели обучения
 
-After completing this lesson, you will understand:
+Пройдя этот урок, вы поймете:
 
-* What generative AI is and how Large Language Models work.
-* How you can leverage large language models for different use cases, with a focus on education scenarios.
+* Что такое генеративный ИИ и как работают большие языковые модели.
+* Как можно использовать большие языковые модели в различных случаях, уделяя особое внимание образовательным сценариям.
 
-## Scenario: our educational startup 
+## Сценарий: наш образовательный стартап 
 
-Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this curriculum we'll explore how it's revolutionizing education through a fictional startup. We'll refer to this startup as *our startup*. Our startup works in the education domain with the ambitious mission statement of 
+Генеративный искусственный интеллект (ИИ) представляет собой вершину технологии ИИ, раздвигая границы того, что раньше считалось невозможным. Модели генеративного искусственного интеллекта имеют множество возможностей и применений, но в этой учебной программе мы рассмотрим, как он революционизирует образование на примере вымышленного стартапа. Мы будем называть этот стартап *наш стартап*. Наш стартап работает в сфере образования и ставит перед собой амбициозную задачу 
 
-> *improving accessibility in learning, on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs*.
+> *улучшение доступности обучения в глобальном масштабе, обеспечение равного доступа к образованию и предоставление персонализированного опыта обучения каждому учащемуся в соответствии с его потребностями*.
 
-Our startup team is aware we’ll not be able to achieve this goal without leveraging one of the most powerful tools of modern times – Large Language Models (LLMs).
+Наша команда осознает, что мы не сможем достичь этой цели без использования одного из самых мощных инструментов современности - больших языковых моделей (LLM).
 
-Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
+Генеративный ИИ, как ожидается, произведет революцию в том, как мы сегодня учимся и преподаем: студенты будут иметь в своем распоряжении виртуальных учителей 24 часа в сутки, которые предоставят им огромное количество информации и примеров, а преподаватели смогут использовать инновационные инструменты для оценки своих учеников и предоставления обратной связи.
 
-![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+![Пять молодых студентов смотрят на монитор - изображение DALLE2](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
 
-To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
+Для начала давайте определим некоторые основные понятия и термины, которые мы будем использовать на протяжении всей учебной программы.
 
-## How did we get Generative AI?
+## Как мы получили генеративный ИИ?
 
-Despite the extraordinary *hype* created lately by the announcement of generative AI models, this technology is decades in the making, with the first research efforts dating back to 60s. We're now at a point with AI having human cognitive capabilities, like conversation as shown by for example [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), which also uses a GPT model for the web search Bing conversations.
+Несмотря на необычайную шумиху, поднятую в последнее время в связи с анонсом генеративных моделей ИИ, эта технология создавалась десятилетиями, а первые исследования были проведены еще в 60-х годах прошлого века. Сейчас мы находимся на том этапе, когда ИИ обладает человеческими когнитивными способностями, например, разговаривает, как показано, например, в [OpenAI ChatGPT](https://openai.com/chatgpt) или [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), который также использует GPT-модель для веб-поиска Bing conversations.
 
-Backing up a bit, the  very first prototypes of AI consisted of typewritten chatbots, relying on a knowledge base extracted from a group of experts and represented into a computer. The answers in the knowledge base were triggered by keywords appearing in the input text.
-However, it soon became clear that such approach, using typewritten chatbots, did not scale well.
+Если вернуться немного назад, то самые первые прототипы ИИ представляли собой чат-ботов, пишущих на машинке, опирающихся на базу знаний, собранную группой экспертов и представленную в компьютере. Ответы в базе знаний находились по ключевым словам, встречающимся во входном тексте.
+Однако вскоре стало ясно, что такой подход, использующий машинописные чат-боты, плохо масштабируется.
 
-### A statistical approach to AI: Machine Learning
+### Статистический подход к ИИ: машинное обучение
 
-A turning point arrived during the 90s, with the application of a statistical approach to text analysis. This led to the development of new algorithms – known with the name of machine learning - able to learn patterns from data, without being explicitly programmed. This approach allows a machine to simulate human language understanding: a statistical model is trained on text-label pairings, enabling the model to classify unknown input text with a pre-defined label representing the intention of the message.
+Переломный момент наступил в 90-х годах прошлого века, когда к анализу текстов был применен статистический подход. Это привело к разработке новых алгоритмов, известных под названием "машинное обучение", способных узнавать закономерности из данных, не будучи явно запрограммированными. Этот подход позволяет машине имитировать понимание человеческого языка: статистическая модель обучается на парах текст-метка, что позволяет ей классифицировать неизвестный входной текст с заранее заданной меткой, отражающей намерение сообщения.
 
-### Neural networks and modern virtual assistants
+### Нейронные сети и современные виртуальные помощники
 
-In more recent times, the technological evolution of the hardware, capable of handling larger amounts of data and more complex computations, encouraged research in the AI fields, leading to the development of advanced machine learning algorithms – called neural networks or deep learning algorithms.
+В более позднее время технологическое развитие аппаратного обеспечения, способного обрабатывать большие объемы данных и выполнять более сложные вычисления, стимулировало исследования в области ИИ, что привело к разработке передовых алгоритмов машинного обучения - так называемых нейронных сетей или алгоритмов глубокого обучения.
 
-Neural networks (and in particular Recurrent Neural Networks – RNNs) significantly enhanced natural language processing, enabling the representation of the meaning of text in a more meaningful way, valuing the context of a word in a sentence.
+Нейронные сети (и в особенности рекуррентные нейронные сети - РНС) значительно улучшили обработку естественного языка, позволив представлять смысл текста более осмысленно, оценивая контекст слова в предложении.
 
-This is the technology that powered the virtual assistants born in the first decade of the new century, very proficient in interpreting the human language, identifying a need, and performing an action to satisfy it – like answering with a pre-defined script or consuming a 3rd party service.
+Именно эта технология легла в основу виртуальных помощников, появившихся на свет в первом десятилетии нового века. Они умело интерпретируют человеческий язык, определяют потребность и выполняют действие для ее удовлетворения - например, отвечают по заранее заданному сценарию или используют сторонний сервис.
 
-### Present day, Generative AI
+### Сегодняшний день, Генеративный ИИ
 
-So that’s how we came to Generative AI today, which can be seen as a subset of deep learning.
+Так мы пришли к генеративному искусственному интеллекту, который можно рассматривать как подмножество глубокого обучения.
 
-![AI, ML, DL and Generative AI](./images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
+![ИИ, ML, DL и генеративный ИИ](./images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
 
-After decades of research in the AI field, a new model architecture – called *Transformer* – overcame the limits of RNNs, being able to get much longer sequences of text as input. Transformers are based on the attention mechanism, enabling the model to give different weights to the inputs it receives, ‘paying more attention’ where the most relevant information is concentrated, regardless of their order in the text sequence.
+После десятилетий исследований в области ИИ новая архитектура модели, названная *Трансформер*, преодолела ограничения RNN, способная получать на вход гораздо более длинные последовательности текста. Трансформеры основаны на механизме внимания, позволяющем модели придавать различные веса получаемым данным, "уделяя больше внимания" тем местам, где сосредоточена наиболее значимая информация, независимо от их порядка в текстовой последовательности.
 
-Most of the recent generative AI models – also known as Large Language Models (LLMs), since they work with textual inputs and outputs – are indeed based on this architecture. What’s interesting about these models – trained on a huge amount of unlabeled data from diverse sources like books, articles and websites – is that they can be adapted to a wide variety of tasks and generate grammatically correct text with a semblance of creativity. So, not only did they incredibly enhance the capacity of a machine to ‘understand’ an input text, but they enabled their capacity to generate an original response in human language.
+Большинство современных генеративных моделей ИИ - также известных как большие языковые модели (Large Language Models, LLM), поскольку они работают с текстовыми входами и выходами - действительно основаны на этой архитектуре. Что интересно в этих моделях - обученных на огромном количестве немаркированных данных из различных источников, таких как книги, статьи и веб-сайты, - так это то, что они могут быть адаптированы к широкому спектру задач и генерировать грамматически правильный текст с подобием творчества. Таким образом, они не только невероятно расширили возможности машины по "пониманию" входного текста, но и позволили ей генерировать оригинальный ответ на человеческом языке.
 
-## How do large language models work?
+## Как работают большие языковые модели?
 
-In the next chapter we are going to explore different types of Generative AI models, but for now let’s have a look at how large language models work, with a focus on OpenAI GPT (Generative Pre-trained Transformer) models.
+В следующей главе мы рассмотрим различные типы генеративных моделей ИИ, а пока давайте посмотрим, как работают большие языковые модели, сфокусировавшись на моделях OpenAI GPT (Generative Pre-trained Transformer).
 
-* **Tokenizer, text to numbers**: Large Language Models receive a text as input and generate a text as output. However, being statistical models, they work much better with numbers than text sequences. That’s why every input to the model is processed by a tokenizer, before being used by the core model. A token is a chunk of text – consisting of a variable number of characters, so the tokenizer's main task is splitting the input into an array of tokens. Then, each token is mapped with a token index, which is the integer encoding of the original text chunk.
+* **Токенизатор, преобразование текста в цифры**: Большие языковые модели получают текст на вход и генерируют текст на выходе. Однако, будучи статистическими моделями, они гораздо лучше работают с числами, чем с текстовыми последовательностями. Поэтому каждый входной сигнал модели обрабатывается токенизатором, прежде чем он будет использован основной моделью. Токен - это фрагмент текста, состоящий из переменного количества символов, поэтому основная задача токенизатора - разбить входные данные на массив токенов. Затем каждому токену сопоставляется индекс токена, который представляет собой целочисленную кодировку исходного текстового фрагмента.
 
-![Example of tokenization](./images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Пример токенизации](./images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
-* **Predicting output tokens**: Given n tokens as input (with max n varying from one model to another), the model is able to predict one token as output. This token is then incorporated into the input of the next iteration, in an expanding window pattern, enabling a better user experience of getting one (or multiple) sentence as an answer. This explains why, if you ever played with ChatGPT, you might have noticed that sometimes it looks like it stops in the middle of a sentence.
+* **Предсказание выходных лексем**: Учитывая n лексем в качестве входных данных (максимальное n варьируется от модели к модели), модель способна предсказать одну лексему в качестве выходной. Эта лексема затем включается в исходные данные следующей итерации в виде расширяющегося окна, что позволяет пользователю получить одно (или несколько) предложений в качестве ответа. Это объясняет, почему, если вы когда-нибудь играли с ChatGPT, вы могли заметить, что иногда кажется, что он останавливается на середине предложения.
 
-* **Selection process, probability distribution**: The output token is chosen by the model according to its probability of occurring after the current text sequence. This is because the model predicts a probability distribution over all possible ‘next tokens’, calculated based on its training. However, not always the token with the highest probability is chosen from the resulting distribution. A degree of randomness is added to this choice, in a way that the model acts in a non-deterministic fashion - we do not get the exact same output for the same input. This degree of randomness is added to simulate the process of creative thinking and it can be tuned using a model parameter called temperature.
+* **Процесс выбора, распределение вероятностей**: Выходная лексема выбирается моделью в соответствии с вероятностью ее появления после текущей последовательности текста. Это происходит потому, что модель предсказывает распределение вероятностей по всем возможным "следующим лексемам", рассчитанное на основе ее обучения. Однако не всегда из полученного распределения выбирается лексема с наибольшей вероятностью. К этому выбору добавляется определенная степень случайности, так что модель действует недетерминированно - мы не получаем абсолютно одинаковый результат на один и тот же вход. Эта степень случайности добавляется для имитации процесса творческого мышления и может быть настроена с помощью параметра модели, называемого температурой.
 
-## How can our startup leverage Large Language Models?
+## Как наш стартап может использовать большие языковые модели?
 
-Now that we have a better understanding of the inner working of a large language model, let’s see some practical examples of the most common tasks they can perform pretty well, with an eye to our business scenario.
-We said that the main capability of a Large Language Model is *generating a text from scratch, starting from a textual input, written in natural language*.
+Теперь, когда мы лучше понимаем внутреннюю работу большой языковой модели, давайте посмотрим несколько практических примеров наиболее распространенных задач, которые они могут выполнять, ориентируясь на наш бизнес-сценарий.
+Мы говорили, что основная возможность Большой языковой модели - это *генерирование текста с нуля, начиная с текстового ввода, написанного на естественном языке*.
 
-But what kind of textual input and output?
-The input of a large language model is known as prompt, while the output is known as completion, term that refers to the model mechanism of generating the next token to complete the current input. We are going to dive deep into what is a prompt and how to design it in a way to get the most out of our model. But for now, let’s just say that a prompt may include:
+Но что за текстовый ввод и вывод?
+Входные данные большой языковой модели называются подсказкой, а выходные данные - завершением, что означает механизм модели, генерирующий следующую лексему для завершения текущего ввода. Мы подробно рассмотрим, что такое подсказка и как разработать ее таким образом, чтобы получить максимальную отдачу от нашей модели. А пока давайте просто скажем, что подсказка может включать в себя:
 
-* An **instruction** specifying the type of output we expect from the model. This instruction sometimes might embed some examples or some additional data.
+* **Инструкция**, определяющая тип вывода, который мы ожидаем от модели. Иногда в эту инструкцию могут быть включены примеры или дополнительные данные.
 
-    1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
+    1. Резюме статей, книг, обзоров товаров и т. д., а также извлечение информации из неструктурированных данных.
     
-    ![Example of summarization](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Пример подведения итогов](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
     
-    2. Creative ideation and design of an article, an essay, an assignment or more.
+    2. Креативная идея и дизайн статьи, эссе, задания и многое другое.
     
-    ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Пример творческого письма](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
     
-* A **question**, asked in the form of a conversation with an agent.
+* **Вопрос**, заданный в форме разговора с агентом.
   
-![Example of conversation](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
+![Пример разговора](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
-* A chunk of **text to complete**, which implicitly is an ask for writing assistance.
+* Кусок **текста для завершения**, который неявно является просьбой о помощи в написании.
    
-![Example of text completion](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
+![Пример завершения текста](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
-* A chunk of **code** together with the ask of explaining and documenting it, or a comment asking to generate a piece of code performing a specific task.
+* Кусок **кода** вместе с просьбой объяснить и задокументировать его, или комментарий с просьбой сгенерировать кусок кода, выполняющий определенную задачу.
 
-![Coding example](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
+![Пример кодирования](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
-The examples above are quite simple and don’t want to be an exhaustive demonstration of Large Language Models capabilities. They just want to show the potential of using generative AI, in particular but not limited to educational context.
+Приведенные выше примеры довольно просты и не претендуют на исчерпывающую демонстрацию возможностей Large Language Models. Они просто хотят показать потенциал использования генеративного ИИ, в частности, но не только в образовательном контексте.
 
-Also, the output of a generative AI model is not perfect and sometimes the creativity of the model can work against it, resulting in an output which is a combination of words that the human user can interpret as a mystification of reality, or it can be offensive. Generative AI is not intelligent - at least in the more comprehensive definition of intelligence, including critical and creative reasoning or emotional intelligence; it is not deterministic, and it is not trustworthy, since fabrications, such as erroneous references, content, and statements, may be combined with correct information, and presented in a persuasive and confident manner. In the following lessons, we’ll be dealing with all these limitations and we’ll see what we can do to mitigate them.
+Кроме того, результаты работы генеративной модели ИИ не идеальны, и иногда творческий потенциал модели может работать против нее, в результате чего получаются комбинации слов, которые пользователь может интерпретировать как мистификацию реальности, или же они могут быть оскорбительными. Генеративный ИИ не является интеллектуальным - по крайней мере, в более широком определении интеллекта, включающем критическое и творческое мышление или эмоциональный интеллект; он не детерминирован и не заслуживает доверия, поскольку фальсификации, такие как ошибочные ссылки, содержание и утверждения, могут сочетаться с правильной информацией и представляться в убедительной и уверенной манере. В следующих уроках мы разберемся со всеми этими ограничениями и посмотрим, что можно сделать, чтобы смягчить их.
 
-## Assignment
+## Задание
 
-Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan. 
+Ваше задание - прочитать больше о [генеративном ИИ] (https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) и попытаться определить область, в которую вы могли бы добавить генеративный ИИ сегодня, но в которой его нет. Чем это будет отличаться от "старого способа", сможете ли вы сделать то, чего не могли раньше, или станете быстрее? Напишите резюме в 300 слов о том, как будет выглядеть стартап вашей мечты в области ИИ, включив в него заголовки "Проблема", "Как я буду использовать ИИ", "Влияние" и, по желанию, бизнес-план. 
 
-If you did this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
+Если вы справились с этим заданием, возможно, вы даже готовы подать заявку на участие в инкубаторе Microsoft [Microsoft for Startups Founders Hub] (https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst). Мы предлагаем кредиты на Azure, OpenAI, наставничество и многое другое, ознакомьтесь с ними!
 
-## Knowledge check
+## Проверка знаний
 
-What's true about large language models?
+Что правда о больших языковых моделях?
 
-1. You get the exact same response every time.
-1. It does things perfectly, great at adding numbers, produce working code etc.
-1. The response may vary despite using the same prompt. It's also great at giving you a first draft of something, be it text or code. But you need to improve on the results.
+1. Вы каждый раз получаете один и тот же ответ.
+2. Он отлично справляется со всеми задачами, отлично складывает числа, создает рабочий код и т. д.
+3. Ответ может отличаться, несмотря на использование одной и той же подсказки. Он также отлично подходит для создания первого наброска чего-либо, будь то текст или код. Но вам нужно улучшить результаты.
 
-A: 3, an LLM is non-deterministic, the response vary, however, you can control its variance via a temperature setting. You also shouldn't expect it to do things perfectly, it's here to do the heavy-lifting for you which often means you get a good first attempt at something that you need to gradually improve.
+Ответ: 3, LLM недетерминирован, его реакция может быть разной, однако вы можете контролировать ее разброс с помощью настройки температуры. Также не стоит ожидать, что он будет делать все идеально, он здесь для того, чтобы делать тяжелую работу за вас, что часто означает, что вы получаете хорошую первую попытку сделать что-то, что вам нужно постепенно улучшить.
 
-## Great Work! Continue the Journey 
+## Отличная работа! Продолжайте путешествие 
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+После завершения этого урока ознакомьтесь с нашей коллекцией [Generative AI Learning collection] (https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), чтобы продолжить совершенствовать свои знания в области генеративного искусственного интеллекта!
 
-Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Переходите к Уроку 2, где мы рассмотрим, как [изучить и сравнить различные типы LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
