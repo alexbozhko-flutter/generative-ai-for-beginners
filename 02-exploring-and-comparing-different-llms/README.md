@@ -1,147 +1,147 @@
-# Exploring and comparing different LLMs
+# Изучение и сравнение различных программ LLM
 
-[![Exploring and comparing different LLMs](./images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=39aa0f98-826a-4f71-a24d-e888a8e80246?WT.mc_id=academic-105485-koreyst)
+[![Изучение и сравнение различных программ LLM](./images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=39aa0f98-826a-4f71-a24d-e888a8e80246?WT.mc_id=academic-105485-koreyst)
 
-> *Click the image above to view video of this lesson*
+> *Нажмите на картинку выше, чтобы посмотреть видео этого урока*
 
-With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
+В предыдущем уроке мы увидели, как генеративный ИИ меняет технологический ландшафт, как работают большие языковые модели (LLM) и как бизнес - например, наш стартап - может применять их в своих кейсах и развиваться! В этой главе мы хотим сравнить и сопоставить различные типы больших языковых моделей, LLM, чтобы понять их преимущества и недостатки.
 
-The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
+Следующий шаг на пути нашего стартапа - изучение современного ландшафта больших языковых моделей (LLM) и понимание того, какие из них подходят для нашего случая использования.
 
 ## Introduction
 
-This lesson will cover:
+В этом уроке мы рассмотрим:
 
-- Different types of LLMs in the current landscape.
-- Testing, iterating, and comparing different models for your use case in Azure.
+- Различные типы LLM в современном ландшафте.
+- Тестирование, итерации и сравнение различных моделей для вашего сценария использования в Azure.
 - How to deploy an LLM.
 
-## Learning Goals
+## Цели обучения
 
-After completing this lesson, you will be able to:
+После завершения этого урока вы сможете:
 
-- Select the right model for your use case.
-- Understand how to test, iterate, and improve performance of your model.
-- Know how businesses deploy models.
+- Выберите подходящую модель для вашего случая.
+- Поймите, как тестировать, проводить итерации и улучшать производительность вашей модели.
+- Знайте, как предприятия внедряют модели.
 
-## Understand different types of LLMs
+## Разберитесь в различных типах LLM
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help our startup select the right model for the scenario, and understand how to test, iterate, and improve performance.
+Большие языковые модели (LLM) могут иметь несколько категорий, основанных на их архитектуре, обучающих данных и сценарии использования. Понимание этих различий поможет нашему стартапу выбрать подходящую модель для конкретного сценария, а также понять, как тестировать, итерировать и улучшать производительность.
 
-There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more.
+Существует множество различных типов моделей LLM, выбор модели зависит от того, для чего вы собираетесь их использовать, от ваших данных, от того, сколько вы готовы заплатить, и от многого другого.
 
-Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
+В зависимости от того, планируете ли вы использовать модели для работы с текстом, аудио, видео, изображениями и т. д., вы можете выбрать другой тип модели.
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Распознавание аудио и речи**. Для этой цели отлично подойдут модели типа Whisper, поскольку они являются универсальными и нацелены на распознавание речи. Они обучаются на различных аудиозаписях и могут выполнять многоязычное распознавание речи. Подробнее о [модели типа Whisper здесь](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) and also in Chapter 9 of this curriculum.
+- **Создание изображений**. Для генерации изображений можно использовать DALL-E и Midjourney - два очень известных варианта. DALL-E предлагается компанией Azure OpenAI. [Подробнее о фильме "ДАЛЛ-И" читайте здесь](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) а также в главе 9 этой учебной программы.
 
-- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) to evaluate which models best fit your needs in terms of capability and cost.
+- **Генерация текста**. Большинство моделей обучаются генерации текста, и у вас есть большой выбор от GPT-3.5 до GPT-4. Они имеют разную стоимость, причем GPT-4 - самая дорогая. Стоит обратить внимание на [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) чтобы оценить, какие модели лучше всего соответствуют вашим потребностям с точки зрения возможностей и стоимости.
 
-Selecting a model means you get some basic capabilities, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming sections.
+Выбор модели означает, что вы получаете некоторые базовые возможности, однако этого может быть недостаточно. Часто у вас есть специфические данные компании, о которых вам нужно как-то сообщить LLM. Есть несколько вариантов, как к этому подступиться, подробнее об этом в следующих разделах.
 
-### Foundation Models versus LLMs
+### Модели Foundation в сравнении с LLM
 
-The term Foundation Model was [coined by Stanford researchers](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) and defined as an AI model that follows some criteria, such as:
+Термин "Foundation Model" был [придуман исследователями из Стэнфорда](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) и определяется как модель искусственного интеллекта, которая соответствует некоторым критериям, таким как:
 
-- **They are trained using unsupervised learning or self-supervised learning**, meaning they are trained on unlabeled multi-modal data, and they do not require human annotation or labeling of data for their training process.
-- **They are very large models**, based on very deep neural networks trained on billions of parameters.
-- **They are normally intended to serve as a ‘foundation’ for other models**, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
+- **Они обучаются с помощью неконтролируемого обучения или самоконтролируемого обучения**, что означает, что они обучаются на немаркированных мультимодальных данных и не требуют человеческой аннотации или маркировки данных для процесса обучения.
+- **Это очень большие модели**, на основе очень глубоких нейронных сетей, обученных на миллиардах параметров.
+- **Обычно они служат "фундаментом" для других моделей.**, Это означает, что их можно использовать как отправную точку для построения других моделей, на основе которых можно производить тонкую настройку.
 
 ![Foundation Models versus LLMs](./images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-To further clarify this distinction, let’s take ChatGPT as an example. To build the first version of ChatGPT, a model called GPT-3.5 served as the foundation model. This means that OpenAI used some chat-specific data to create a tuned version of GPT-3.5 that was specialized in performing well in conversational scenarios, such as chatbots.
+Чтобы прояснить это различие, давайте рассмотрим ChatGPT на примере. Для создания первой версии ChatGPT в качестве базовой модели использовалась модель под названием GPT-3.5. Это означает, что OpenAI использовал некоторые данные, специфичные для чатов, чтобы создать настроенную версию GPT-3.5, которая была специализирована для работы в разговорных сценариях, таких как чат-боты.
 
 ![Foundation Model](./images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Open Source versus Proprietary Models
+### Модели с открытым исходным кодом и проприетарные модели
 
-Another way to categorize LLMs is whether they are open source or proprietary.
+Еще один способ классифицировать LLM - открытые или проприетарные.
 
-Open-source models are models that are made available to the public and can be used by anyone. They are often made available by the company that created them, or by the research community. These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. However, they are not always optimized for production use, and may not be as performant as proprietary models. Plus, funding for open-source models can be limited, and they may not be maintained long term or may not be updated with the latest research. Examples of popular open source models include [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) and [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst).
+Модели с открытым исходным кодом - это модели, которые находятся в открытом доступе и могут использоваться всеми желающими. Часто они предоставляются компанией, которая их создала, или исследовательским сообществом. Эти модели можно проверять, изменять и настраивать для различных случаев использования в LLM. Однако они не всегда оптимизированы для использования в производстве и могут быть не столь производительны, как проприетарные модели. Кроме того, финансирование моделей с открытым исходным кодом может быть ограничено, и они могут не поддерживаться в течение длительного времени или не обновляться с учетом последних исследований. Примеры популярных моделей с открытым исходным кодом включают [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) и [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst).
 
-Proprietary models are models that are owned by a company and are not made available to the public. These models are often optimized for production use. However, they are not allowed to be inspected, modified, or customized for different use cases. Plus, they are not always available for free, and may require a subscription or payment to use. Also, users do not have control over the data that is used to train the model, which means they should entrust the model owner with ensuring commitment to data privacy and responsible use of AI. Examples of popular proprietary models include [OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) or [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Проприетарные модели - это модели, которые принадлежат компании и не предоставляются общественности. Эти модели часто оптимизированы для использования в производстве. Однако их нельзя проверять, изменять или настраивать для различных случаев использования. Кроме того, они не всегда доступны бесплатно, для их использования может потребоваться подписка или оплата. Кроме того, пользователи не имеют контроля над данными, которые используются для обучения модели, а значит, они должны доверить владельцу модели обеспечение конфиденциальности данных и ответственного использования ИИ. Примеры популярных проприетарных моделей включают [OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) или [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
 
-### Embedding versus Image generation versus Text and Code generation
+### Встраивание по сравнению с генерацией изображений по сравнению с генерацией текста и кода
 
-LLMs can also be categorized by the output they generate.
+LLM также можно классифицировать по генерируемому ими результату.
 
-Embeddings are a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Вкрапления - это набор моделей, которые могут преобразовывать текст в числовую форму, называемую вкраплением, которое является числовым представлением входного текста. Модели вкраплений облегчают машинам понимание взаимосвязей между словами или предложениями и могут использоваться в качестве входных данных другими моделями, например моделями классификации или кластеризации, которые лучше работают с числовыми данными. Модели с вкраплениями часто используются для трансферного обучения, когда модель строится для суррогатной задачи, для которой имеется большое количество данных, а затем веса модели (вкрапления) повторно используются для других последующих задач. Примером этой категории является [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
 ![Embedding](./images/Embedding.png?WT.mc_id=academic-105485-koreyst)
 
-Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), and can be used to generate new images or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Модели генерации изображений - это модели, которые генерируют изображения. Эти модели часто используются для редактирования изображений, синтеза изображений и перевода изображений. Модели генерации изображений часто обучаются на больших массивах данных изображений, таких как [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), и могут использоваться для создания новых изображений или редактирования существующих с помощью методов инкрустации, суперразрешения и колоризации. Примеры включают [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) и [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](./images/Image.png?WT.mc_id=academic-105485-koreyst)
+![Создание изображений](./images/Image.png?WT.mc_id=academic-105485-koreyst)
 
-Text and code generation models are models that generate text or code. These models are often used for text summarization, translation, and question answering. Text generation models are often trained on large datasets of text, such as [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), and can be used to generate new text, or to answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), are often trained on large datasets of code, such as GitHub, and can be used to generate new code, or to fix bugs in existing code.
+Модели генерации текста и кода - это модели, которые генерируют текст или код. Такие модели часто используются для обобщения текста, перевода и ответов на вопросы. Модели генерации текста часто обучаются на больших наборах данных текста, таких как [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), и могут быть использованы для создания нового текста или для ответов на вопросы. Модели генерации кода, такие как [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), часто обучаются на больших массивах кода, таких как GitHub, и могут использоваться для генерации нового кода или для исправления ошибок в существующем коде.
 
  ![Text and code generation](./images/Text.png?WT.mc_id=academic-105485-koreyst)
 
-### Encoder-Decoder versus Decoder-only
+### Кодер-декодер в сравнении с только декодером
 
-To talk about the different types of architectures of LLMs, let's use an analogy.
+Чтобы рассказать о различных типах архитектур LLM, давайте воспользуемся аналогией.
 
-Imagine your manager gave you a task for writing a quiz for the students.  You have two colleagues; one oversees creating the content and the other oversees reviewing them.
+Представьте, что ваш руководитель дал вам задание написать контрольную работу для студентов.  У вас есть два коллеги: один отвечает за создание контента, а другой - за его рецензирование.
 
-The content creator is like a Decoder only model, they can look at the topic and see what you already wrote and then he can write a course based on that. They are very good at writing engaging and informative content, but they are not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
+Создатель контента - это как модель Decoder only, он может посмотреть на тему и увидеть, что вы уже написали, а затем на основе этого написать курс. Они очень хороши в написании увлекательного и информативного контента, но не очень хороши в понимании темы и целей обучения. Примерами моделей Decoder являются модели семейства GPT, например GPT-3.
 
-The reviewer is like an Encoder only model, they look at the course written and the answers, noticing the relationship between them and understanding context, but they are not good at generating content. An example of Encoder only model would be BERT.
+Рецензент похож только на модель Encoder, он смотрит на написанный курс и ответы, замечает взаимосвязь между ними и понимает контекст, но не очень хорош в создании контента. Примером модели "только кодировщик" может быть BERT.
 
-Imagine that we can have someone as well who could create and review the quiz, this is an Encoder-Decoder model. Some examples would be BART and T5.
+Представьте, что у нас есть кто-то, кто может создавать и проверять тесты, - это модель кодировщика-декодировщика. Примерами могут служить BART и T5.
 
-### Service versus Model
+### Сервис в сравнении с моделью
 
-Now, let's talk about the difference between a service and a model. A service is a product that is offered by a Cloud Service Provider, and is often a combination of models, data, and other components. A model is the core component of a service, and is often a foundation model, such as an LLM.
+Теперь давайте поговорим о разнице между сервисом и моделью. Сервис - это продукт, предлагаемый поставщиком облачных услуг, который часто представляет собой комбинацию моделей, данных и других компонентов. Модель является основным компонентом сервиса и часто представляет собой базовую модель, например LLM.
 
-Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange for leveraging the service owner’s equipment and resources, optimizing expenses and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
+Сервисы часто оптимизированы для производственного использования и зачастую проще в использовании, чем модели, благодаря графическому интерфейсу пользователя. Однако сервисы не всегда доступны бесплатно и могут требовать подписки или оплаты за использование, в обмен на использование оборудования и ресурсов владельца сервиса, оптимизацию расходов и легкое масштабирование. Примером такого сервиса является [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), который предлагает тарифный план с оплатой по факту использования, то есть с пользователей взимается плата пропорционально количеству использования сервиса. Кроме того, Azure OpenAI service предлагает безопасность корпоративного уровня и ответственную структуру ИИ поверх возможностей моделей.
 
-Models are just the Neural Network, with the parameters, weights, and others. Allowing companies to run locally, however, would need to buy equipment, build structure to scale and buy a license or use an open-source model. A model like LLaMA is available to be used, requiring computational power to run the model.
+Модели - это просто нейросеть, с параметрами, весами и прочим. Однако, чтобы позволить компаниям работать локально, необходимо купить оборудование, построить структуру для масштабирования и приобрести лицензию или использовать модель с открытым исходным кодом. Такая модель, как LLaMA, доступна для использования, но для ее запуска требуются вычислительные мощности.
 
-## How to test and iterate with different models to understand performance on Azure
+## Как тестировать и повторять различные модели, чтобы понять производительность в Azure
 
-Once our team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
-Most of the models we mentioned in previous paragraphs (OpenAI models, open source models like Llama2, and Hugging Face transformers) are available in the [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) catalog in [Azure Machine Learning studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst).
+После того как наша команда изучила существующий ландшафт LLM и определила несколько хороших кандидатов для своих сценариев, следующим шагом станет их тестирование на своих данных и в своей рабочей нагрузке. Это итеративный процесс, осуществляемый с помощью экспериментов и измерений.
+Большинство моделей, о которых мы упоминали в предыдущих пунктах (модели OpenAI, модели с открытым исходным кодом, такие как Llama2, и трансформаторы Hugging Face), доступны в каталоге [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) в [Azure Machine Learning studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
+[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) - это облачный сервис, предназначенный для специалистов по изучению данных и инженеров ML, чтобы управлять всем жизненным циклом ML (обучение, тестирование, развертывание и обработка MLOps) на единой платформе. Студия Machine Learning предлагает графический пользовательский интерфейс к этой службе и позволяет пользователю:
 
-- Find the Foundation Model of interest in the catalog, filtering by task, license, or name. It’s also possible to import new models that are not yet included in the catalog.
-- Review the model card, including a detailed description and code samples, and test it with the Sample Inference widget, by providing a sample prompt to test the result.
+- Найдите интересующую вас модель Foundation Model в каталоге, отфильтровав ее по задаче, лицензии или названию. Также можно импортировать новые модели, которые еще не включены в каталог.
+- Просмотрите карточку модели, включая подробное описание и примеры кода, и протестируйте ее с помощью виджета Sample Inference, предоставив пример подсказки для проверки результата.
 
 ![Model card](./images/Llama1.png?WT.mc_id=academic-105485-koreyst)
 
-- Evaluate model performance with objective evaluation metrics on a specific workload and a specific set of data provided in input.
+- Оцените производительность модели с помощью объективных оценочных показателей на конкретной рабочей нагрузке и конкретном наборе данных, предоставленных на вход.
 
 ![Model evaluation](./images/Llama2.png?WT.mc_id=academic-105485-koreyst)
 
-- Fine-tune the model on custom training data to improve model performance in a specific workload, leveraging the experimentation and tracking capabilities of Azure Machine Learning.
+- Донастройте модель на пользовательских обучающих данных для повышения производительности модели в конкретной рабочей нагрузке, используя возможности экспериментов и отслеживания в Azure Machine Learning.
 
 ![Model fine-tuning](./images/Llama3.png?WT.mc_id=academic-105485-koreyst)
 
-- Deploy the original pre-trained model or the fine-tuned version to a remote real time inference or batch endpoint, to enable applications to consume it.
+- Разверните исходную предварительно обученную модель или доработанную версию на удаленную конечную точку для выводов в реальном времени или в пакетном режиме, чтобы приложения могли ее использовать.
 
 ![Model deployment](./images/Llama4.png?WT.mc_id=academic-105485-koreyst)
 
-## Improving LLM results
+## Улучшение результатов обучения по программе LLM
 
-We’ve explored with our startup team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
+Вместе с командой нашего стартапа мы изучили различные виды LLM и облачную платформу (Azure Machine Learning), позволяющую сравнивать различные модели, оценивать их на тестовых данных, улучшать производительность и внедрять на конечные точки вывода.
 
-But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads?
+Но когда стоит задуматься о тонкой настройке модели, а не об использовании предварительно обученной? Существуют ли другие подходы к повышению производительности моделей на конкретных рабочих нагрузках?
 
-There are several approaches a business can use to get the results they need from an LLM, you can select different types of models with different degrees of training
+Существует несколько подходов, которые может использовать компания для получения нужных результатов от LLM. Вы можете выбрать различные типы моделей с разной степенью подготовки
 
-deploy an LLM in production, with different levels of complexity, cost, and quality. Here are some different approaches:
+развернуть LLM в производстве с различными уровнями сложности, стоимости и качества. Вот несколько различных подходов:
 
-- **Prompt engineering with context**. The idea is to provide enough context when you prompt to ensure you get the responses you need.
+- **Промпт инжиниринг с использованием контекста**. Идея заключается в том, чтобы предоставить достаточно контекста, когда вы запрашиваете, чтобы получить нужные ответы.
 
-- **Retrieval Augmented Generation, RAG**. Your data might exist in a database or web endpoint for example, to ensure this data, or a subset of it, is included at the time of prompting, you can fetch the relevant data and make that part of the user's prompt.
+- **Генерация с поддержкой извлечения данных, RAG**. Например, ваши данные могут находиться в базе данных или в конечной точке веб-сайта. Чтобы обеспечить включение этих данных или их подмножества во время запроса, вы можете получить соответствующие данные и сделать их частью запроса пользователя.
 
-- **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
+- **Модель с тонкой настройкой**. В этом случае вы обучаете модель на собственных данных, что приводит к тому, что модель становится более точной и отвечает вашим потребностям, но может быть дорогостоящей.
 
 ![LLMs deployment](./images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
@@ -149,24 +149,24 @@ Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://w
 
 ### Prompt Engineering with Context
 
-Pre-trained LLMs work very well on generalized natural language tasks, even by calling them with a short prompt, like a sentence to complete or a question – the so-called “zero-shot” learning.
+Предварительно обученные LLM очень хорошо справляются с обобщенными задачами на естественном языке, даже если вызывать их с помощью короткой подсказки, например, предложения для завершения или вопроса - так называемое обучение "с нуля".
 
-However, the more the user can frame their query, with a detailed request and examples – the Context – the more accurate and closest to user’s expectations the answer will be. In this case, we talk about “one-shot” learning if the prompt includes only one example and “few shot learning” if it includes multiple examples.
-Prompt engineering with context is the most cost-effective approach to kick-off with.
+Однако чем больше пользователь может сформулировать свой запрос с подробной просьбой и примерами - Контекст - тем точнее и ближе к ожиданиям пользователя будет ответ. В этом случае мы говорим об "одноразовом" обучении, если подсказка содержит только один пример, и о "многоразовом обучении", если она включает несколько примеров.
+Разработка подсказок с учетом контекста - наиболее экономически эффективный подход, с которого стоит начать.
 
 ### Retrieval Augmented Generation (RAG)
 
-LLMs have the limitation that they can use only the data that has been used during their training to generate an answer. This means that they don’t know anything about the facts that happened after their training process, and they cannot access non-public information (like company data).
-This can be overcome through RAG, a technique that augments prompt with external data in the form of chunks of documents, considering prompt length limits. This is supported by Vector database tools (like [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) that retrieve the useful chunks from varied pre-defined data sources and add them to the prompt Context.
+У LLM есть ограничение: для получения ответа они могут использовать только те данные, которые были использованы во время их обучения. Это означает, что они ничего не знают о фактах, произошедших после процесса обучения, и не могут получить доступ к непубличной информации (например, данным компании).
+Эту проблему можно решить с помощью RAG - техники, которая дополняет подсказки внешними данными в виде фрагментов документов, учитывая ограничения на длину подсказки. Это поддерживается инструментами векторной базы данных (например, [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), которые извлекают полезные фрагменты из различных предварительно определенных источников данных и добавляют их в контекст подсказки.
 
-This technique is very helpful when a business doesn’t have enough data, enough time, or resources to fine-tune an LLM, but still wishes to improve performance on a specific workload and reduce risks of fabrications, i.e., mystification of reality or harmful content.  
+Эта техника очень полезна, когда у предприятия нет достаточного количества данных, времени или ресурсов для точной настройки LLM, но при этом оно хочет повысить производительность на конкретной рабочей нагрузке и снизить риски фабрикации, то есть искажения реальности или вредного контента.  
 
 ### Fine-tuned model
 
-Fine-tuning is a process that leverages transfer learning to ‘adapt’ the model to a downstream task or to solve a specific problem. Differently from few-shot learning and RAG, it results in a new model being generated, with updated weights and biases. It requires a set of training examples consisting of a single input (the prompt) and its associated output (the completion).
-This would be the preferred approach if:
+Тонкая настройка - это процесс, использующий трансферное обучение для "адаптации" модели к последующей задаче или решению конкретной проблемы. В отличие от обучения с несколькими выстрелами и RAG, в результате создается новая модель с обновленными весами и смещениями. Для этого требуется набор обучающих примеров, состоящий из одного входа (подсказки) и связанного с ним выхода (завершения).
+Этот подход будет предпочтительным, если:
 
-- **Using fine-tuned models**. A business would like to use fine-tuned less capable models (like embedding models) rather than high performance models, resulting in a more cost effective and fast solution.
+- **Using fine-tuned models**. Бизнесмены предпочитают использовать не высокопроизводительные модели (например, модели встраивания), а тонко настроенные менее производительные модели, что позволяет получить более экономичное и быстрое решение.
 
 - **Considering latency**. Latency is important for a specific use-case, so it’s not possible to use very long prompts or the number of examples that should be learned from the model doesn’t fit with the prompt length limit.
 
@@ -174,23 +174,23 @@ This would be the preferred approach if:
 
 ### Trained model
 
-Training an LLM from scratch is without a doubt the most difficult and the most complex approach to adopt, requiring massive amounts of data, skilled resources, and appropriate computational power. This option should be considered only in a scenario where a business has a domain-specific use case and a large amount of domain-centric data.
+Подготовка LLM с нуля - это, несомненно, самый сложный подход, требующий огромного количества данных, квалифицированных специалистов и соответствующих вычислительных мощностей. Этот вариант следует рассматривать только в том случае, если у компании есть специфический для данной области сценарий использования и большой объем данных, ориентированных на эту область.
 
 ## Knowledge check
 
-What could be a good approach to improve LLM completion results?
+Что может быть хорошим подходом для улучшения результатов окончания LLM?
 
-1. Prompt engineering with context
+1. Оперативное проектирование с использованием контекста
 1. RAG
-1. Fine-tuned model
+1. Тонкая настройка модели
 
-A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
+A:3, если у вас есть время, ресурсы и высококачественные данные, то тонкая настройка - лучший вариант, чтобы оставаться в курсе событий. Однако если вы хотите улучшить ситуацию, но у вас не хватает времени, стоит сначала рассмотреть RAG.
 
-## 🚀 Challenge
+## 🚀 Вызов
 
-Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) for your business.
+Узнайте больше о том, как вы можете [использовать RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) для своего бизнеса.
 
-## Great Work, Continue Your Learning
+## Отличная работа, продолжайте учиться
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
